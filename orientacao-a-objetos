@@ -1,0 +1,30 @@
+class Veiculo{
+  construct(nome, marca){
+    this.nome = nome;
+    this.marca = marca;
+  }
+}
+
+class Carro extends Veiculo {
+  constructor(nome, marca, tipo){
+    super(nome, marca);
+    this.tipo = tipo;
+  }
+}
+
+class Moto extends Veiculo{
+  constructor(nome, marca, cilindrada){
+    super(nome, marca);
+    this.cilindrada = cilindrada;
+  }
+}
+
+let meuCarro = new Carro("Spider", "Ferrari", "Esportivo" );
+let minhaMoto = new Moto("XJ6", "Yamaha", 600);
+
+console.log(meuCarro instanceof Carro); //true
+console.log(minhaMoto instanceof Moto); //true
+console.log(meuCarro instanceof Veiculo); //true
+console.log(minhaMoto instanceof Veiculo);// true
+console.log(meuCarro instanceof Moto); //false
+console.log(minhaMoto instanceof Carro);//false
